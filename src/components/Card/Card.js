@@ -7,28 +7,19 @@ class Card extends Component {
   };
 
   handleClickEvent = () => {
-    console.log("CLICKING");
-    console.log(this.state.status);
     if (this.state.status) {
-      console.log("gaveover");
-      console.log(this.state.status);
-      // this.props.gameOver = () => {
-      // score reset to 0;
+      this.props.gameOver(this.props.score);
+      //shake animation
       // card states = false;
-      // Then -> restart the game;
-      // }
     }
     else {
       this.setState({
         status: true
       }, () => console.log(this.state.status));
-      // this.props.shuffleCard = () => {
-      // randomize array
-      // }
-      // this.props.addScore = () => {
-      // score + 1
-      // }
+      this.props.incrementScore(this.props.score);
     }
+    this.props.shuffleArray(this.props.cards);
+    this.props.guessMessage(this.state.status);
   }
 
   render() {
