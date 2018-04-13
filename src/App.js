@@ -24,7 +24,7 @@ class App extends Component {
   this.setState({ cards });;
   }
 
-  guessMessage = (status) => {
+  outcome = (status) => {
     if (status){
       this.setState({ message: "You had already clicked that one!" });
       this.setState({ score: 0 });
@@ -47,7 +47,7 @@ class App extends Component {
         {this.state.cards.map(card => (
           <Card 
           shuffleArray={this.shuffleArray}
-          guessMessage={this.guessMessage}
+          outcome={this.outcome}
           score={this.state.score}
           cards={this.state.cards}
           card={card}
