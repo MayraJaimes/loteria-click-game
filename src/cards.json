@@ -2,73 +2,61 @@
   {
     "id": 1,
     "name": "La luna/moon",
-    "status": false,
     "image": "https://i.pinimg.com/736x/05/c8/6d/05c86d641bb2af3632437f5ec257048a--mexican-art-mexican-loteria.jpg"
   },
   {
     "id": 2,
     "name": "El Sol/sun",
-    "status": false,
     "image": "https://i.pinimg.com/736x/a5/84/f9/a584f91122f226de4d7d5a432423dbef--sun-art-mexican-folk-art.jpg"
   },
   {
     "id": 3,
     "name": "La Sandia/Watermelon",
-    "status": false,
     "image": "https://i.pinimg.com/736x/e4/19/1c/e4191c1f9f6f475b52c490d678f981de--lady-fingers-watermelon.jpg"
   },
   {
     "id": 4,
     "name": "El Corazon/Heart",
-    "status": false,
     "image": "https://i.pinimg.com/736x/d0/d8/52/d0d85242c1077b12015297077a184cbf--corazon-tattoo-anatomical-heart-tattoos.jpg"
   },
   {
     "id": 5,
     "name": "La Rosa/Rose",
-    "status": false,
     "image": "https://i.pinimg.com/736x/0a/62/7c/0a627caeb0865f310597a0162cb47eb6--deck-of-cards-lotteria-cards.jpg"
   },
   {
     "id": 6,
     "name": "El Nopal/cactus",
-    "status": false,
     "image": "https://i.pinimg.com/736x/bc/67/6a/bc676a36dd2cb2a69d355edcadfc4dfe--card-reading-bingo.jpg"
   },
   {
     "id": 7,
     "name": "El Arbol/tree",
-    "status": false,
     "image": "https://i.pinimg.com/736x/38/38/80/3838801ae637def4951a665a8c7c9807--loteria-mexicana-loteria-cards.jpg"
   },
   {
     "id": 8,
     "name": "La Escalera/stairs",
-    "status": false,
     "image": "https://i.pinimg.com/736x/32/fc/49/32fc49c31c988bf9239df9ba7c4d201e--mexican-party-mexican-style.jpg"
   },
   {
     "id": 9,
     "name": "La Paraguas/umbrella",
-    "status": false,
     "image": "https://i.pinimg.com/736x/e7/10/9a/e7109ab6052b09ce81a3f806037ea4e4--rain-umbrella-wedding-tables.jpg"
   },
   {
     "id": 10,
     "name": "La Bota/boot",
-    "status": false,
     "image": "https://i.pinimg.com/736x/85/4e/4a/854e4ac263061a49e8baa8a90b4c7e9b--bingo-loteria-cards.jpg"
   },
   {
     "id": 11,
     "name": "La Botella/bottle",
-    "status": false,
     "image": "https://i.pinimg.com/736x/de/59/7d/de597d2ed908d029b6b4a110b28bd8d7--loteria-cards-bottle.jpg"
   },
   {
     "id": 12,
     "name": "El Cantarito/pitcher",
-    "status": false,
     "image": "https://i.pinimg.com/736x/70/e0/06/70e006c1558ec7bf6067b4cce70cf962--water-pitchers-pita.jpg"
   }
 ]

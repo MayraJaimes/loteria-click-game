@@ -24,20 +24,15 @@ class App extends Component {
   this.setState({ cards });;
   }
 
-  incrementScore = () => {
-    this.setState({ score: this.state.score + 1 });
-  };
-
   guessMessage = (status) => {
-    if (status)
+    if (status){
       this.setState({ message: "You had already clicked that one!" });
+      this.setState({ score: 0 });
+  }
     else {
       this.setState({ message: "Great job, keep going!" });
+      this.setState({ score: this.state.score + 1 });
     }
-  };
-
-  gameOver = () => {
-    this.setState({ score: 0 });
   };
 
   render() {
@@ -52,9 +47,7 @@ class App extends Component {
         {this.state.cards.map(card => (
           <Card 
           shuffleArray={this.shuffleArray}
-          incrementScore={this.incrementScore}
           guessMessage={this.guessMessage}
-          gameOver={this.gameOver}
           score={this.state.score}
           cards={this.state.cards}
           card={card}
