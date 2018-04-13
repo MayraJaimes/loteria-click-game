@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import Character from "./components/Character";
-import Header from "./components/Header";
-import Wrapper from "./components/Wrapper";
-import Footer from "./components/Footer";
-
-import images from "./images.json";
-import "./App.css";
+import Character from "./components/Character/Character";
+import Header from "./components/Header/Header";
+import Wrapper from "./components/Wrapper/Wrapper";
+import Footer from "./components/Footer/Footer";
+import cards from "./cards.json";
 
 class App extends Component {
   state = {
-    images
+    cards
   };
 
   render() {
@@ -17,12 +15,12 @@ class App extends Component {
       <div>
         <Header />
         <Wrapper>
-        {this.state.images.map(image => (
+        {this.state.cards.map(card => (
           <Character
-            id={image.id}
-            key={image.id}
-            name={image.name}
-            image={image.image}
+            id={card.id}
+            key={card.id}
+            name={card.name}
+            image={card.image}
           />
         ))}
         </Wrapper>
