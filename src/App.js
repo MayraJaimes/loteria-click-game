@@ -15,14 +15,7 @@ class App extends Component {
       <div>
         <Header />
         <Wrapper>
-        {this.state.cards.map(card => (
-          <Card
-            id={card.id}
-            key={card.id}
-            name={card.name}
-            image={card.image}
-          />
-        ))}
+          <Card cards={this.state.cards}/>
         </Wrapper>
         <Footer />
       </div>
