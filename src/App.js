@@ -15,7 +15,12 @@ class App extends Component {
       <div>
         <Header />
         <Wrapper>
-          <Card cards={this.state.cards}/>
+        {this.state.cards.map(card => (
+          <Card 
+          card={card}
+          key={card.id}
+          />
+        ))}
         </Wrapper>
         <Footer />
       </div>
