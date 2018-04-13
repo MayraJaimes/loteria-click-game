@@ -1,6 +1,6 @@
 import React from "react";
-import "./AllCharacter.css";
+import "./AllCharacters.css";
 
-const AllCharacter = props => "";
+const AllCharacters = props => "";
 
-export default AllCharacter;
+export default AllCharacters;

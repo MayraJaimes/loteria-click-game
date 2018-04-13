@@ -9,4 +9,12 @@ import allImages from "./allImages.json";
 import "./App.css";
 
 class App extends Component {
+  state = {
+    allImages
+  };
+
+
+
 }
+
+export default App;
