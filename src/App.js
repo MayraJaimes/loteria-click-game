@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Character from "./components/Character/Character";
+import Card from "./components/Card/Card";
 import Header from "./components/Header/Header";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Footer from "./components/Footer/Footer";
@@ -16,7 +16,7 @@ class App extends Component {
         <Header />
         <Wrapper>
         {this.state.cards.map(card => (
-          <Character
+          <Card
             id={card.id}
             key={card.id}
             name={card.name}
