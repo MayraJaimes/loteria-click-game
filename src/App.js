@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 import cards from "./cards.json";
 
 style({
-  width: "300px"
+  width: "300px",
 });
 
 class App extends Component {
@@ -77,7 +77,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ToastContainer />
+        <ToastContainer hideProgressBar newestOnTop
+        />
         <Header
           score={this.state.score}
           message={this.state.message}
