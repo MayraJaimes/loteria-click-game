@@ -1,37 +1,52 @@
 import React, { Component } from "react";
+import { shake } from 'react-animations';
+import { StyleSheet, css } from 'aphrodite';
+
 import "./Card.css";
+
+const styles = StyleSheet.create({
+  shake: {
+    animationName: shake,
+    animationDuration: '.5s'
+  }
+})
 
 class Card extends Component {
   state = {
-    status: false
-  };
+    clicked: 0
+  }
 
   handleClickEvent = () => {
-    if (this.state.status) {
-      this.props.outcome(this.state.status);
-      //shake animation
-      // card states = false;
-    }
-    else {
-      console.log(this.state.status)
-      this.setState({
-        status: true
-      }, () => console.log(this.state.status));
-      this.props.outcome(this.state.status);
-    }
-    this.props.shuffleArray(this.props.cards);
-  }
+    this.setState({
+      clicked: this.state.clicked + 1
+    }, () => {
+      this.props.outcome(this.props.card.name);
+      if (this.state.clicked > 1) {
+        setTimeout(() => {
+          this.setState({
+            clicked: 0
+          })
+        }, 500)
+        console.log('resetting state')
+
+      }
+    });
+
+  };
 
   render() {
-    return (
-        <div onClick={this.handleClickEvent} className="imageContainer">
-          <img
-            alt={this.props.card.name}
-            src={this.props.card.image}/>
-        </div>
+    const className = css(
+      this.state.clicked > 1 ? styles.shake : ''
     )
+    return (
+      <div className={className}>
+        <div onClick={this.handleClickEvent} className='imageContainer'>
+          <img alt={this.props.card.desc} src={this.props.card.image} />
+        </div>
+      </div>
+
+    );
   }
 }
-
 
 export default Card;
