@@ -60,17 +60,19 @@ class App extends Component {
 
       clickedArr.push(name);
       this.shuffleArray();
-  
-      return this.setState({
+
+      this.setState({
         message: "Great job, keep going!",
         clicked: clickedArr,
         score,
+        topScore: score > this.state.topScore ? score : this.state.topScore,
         gameEnd: false
       });
+
+      this.shuffleArray();
+
     }
   };
-
-
 
   render() {
     return (
