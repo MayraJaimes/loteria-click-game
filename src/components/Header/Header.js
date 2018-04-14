@@ -6,7 +6,6 @@ const Header = props => (
     <nav className="navbar">
       <ul>
         <li> Loteria Click Game </li>
-        <li> </li>
         <li> Score: {props.score} | Top Score: {props.topScore} </li>
       </ul>
     </nav> 
