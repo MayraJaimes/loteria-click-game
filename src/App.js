@@ -39,7 +39,7 @@ class App extends Component {
     if (this.state.clicked.includes(name)) {
       toast(
         "You had already clicked that one! You lose!!",
-        { autoClose: 5000,
+        { autoClose: 2000,
           type: toast.TYPE.ERROR,
           position: toast.POSITION.TOP_CENTER
         })
