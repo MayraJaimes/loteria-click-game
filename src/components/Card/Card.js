@@ -20,10 +20,10 @@ class Card extends Component {
     if (nextProps.gameEnd === true) {
       console.log('resetting state');
       setTimeout(() => {
-          this.setState({
-            clicked: 0
-          })
-        }, 1000)
+        this.setState({
+          clicked: 0
+        })
+      }, 1000)
     }
   }
 
@@ -34,11 +34,9 @@ class Card extends Component {
     }, () => {
       this.props.outcome(this.props.card.name);
     });
-
   };
 
   render() {
-    console.log('rendering')
     const className = css(
       this.state.clicked > 1 ? styles.shake : ''
     )
@@ -48,7 +46,6 @@ class Card extends Component {
           <img alt={this.props.card.desc} src={this.props.card.image} />
         </div>
       </div>
-
     );
   }
 }

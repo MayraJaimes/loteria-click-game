@@ -51,18 +51,26 @@ class App extends Component {
       });
     }
 
-    toast("Great job, keep going!", { autoClose: 2000, type: toast.TYPE.SUCCESS, position: toast.POSITION.TOP_CENTER })
+    else {
+      toast("Great job, keep going!", 
+      { autoClose: 2000, 
+        type: toast.TYPE.SUCCESS, 
+        position: toast.POSITION.TOP_CENTER 
+      })
 
-    clickedArr.push(name);
-    this.shuffleArray();
-
-    this.setState({
-      message: "Great job, keep going!",
-      clicked: clickedArr,
-      score,
-      gameEnd: false
-    });
+      clickedArr.push(name);
+      this.shuffleArray();
+  
+      return this.setState({
+        message: "Great job, keep going!",
+        clicked: clickedArr,
+        score,
+        gameEnd: false
+      });
+    }
   };
+
+
 
   render() {
     return (
