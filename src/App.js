@@ -17,7 +17,8 @@ class App extends Component {
     clicked: [],
     score: 0,
     topScore: 0,
-    message: "Click a card to begin!"
+    message: "Click a card to begin!",
+    gameEnd: false
   };
 
   shuffleArray = () => {
@@ -36,11 +37,17 @@ class App extends Component {
     const score = this.state.score + 1;
 
     if (this.state.clicked.includes(name)) {
-      toast("You had already clicked that one! You lose!!", { autoClose: 5000, type: toast.TYPE.ERROR, position: toast.POSITION.TOP_CENTER })
+      toast(
+        "You had already clicked that one! You lose!!",
+        { autoClose: 5000,
+          type: toast.TYPE.ERROR,
+          position: toast.POSITION.TOP_CENTER
+        })
       return this.setState({
         clicked: [],
         message: "You had already clicked that one!",
-        score: 0
+        score: 0,
+        gameEnd: true
       });
     }
 
@@ -52,7 +59,8 @@ class App extends Component {
     this.setState({
       message: "Great job, keep going!",
       clicked: clickedArr,
-      score
+      score,
+      gameEnd: false
     });
   };
 
@@ -71,6 +79,7 @@ class App extends Component {
               card={card}
               key={card.id}
               outcome={this.outcome}
+              gameEnd={this.state.gameEnd}
             />
           ))}
         </Wrapper>

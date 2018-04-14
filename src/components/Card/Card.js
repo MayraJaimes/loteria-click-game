@@ -16,25 +16,29 @@ class Card extends Component {
     clicked: 0
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.gameEnd === true) {
+      console.log('resetting state');
+      setTimeout(() => {
+          this.setState({
+            clicked: 0
+          })
+        }, 1000)
+    }
+  }
+
   handleClickEvent = () => {
+    console.log('click event')
     this.setState({
       clicked: this.state.clicked + 1
     }, () => {
       this.props.outcome(this.props.card.name);
-      if (this.state.clicked > 1) {
-        setTimeout(() => {
-          this.setState({
-            clicked: 0
-          })
-        }, 500)
-        console.log('resetting state')
-
-      }
     });
 
   };
 
   render() {
+    console.log('rendering')
     const className = css(
       this.state.clicked > 1 ? styles.shake : ''
     )
